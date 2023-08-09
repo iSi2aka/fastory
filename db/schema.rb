@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_08_061449) do
     t.string "disease", null: false
     t.string "name", null: false
     t.integer "age", null: false
-    t.integer "sex", null: false
+    t.integer "sex_id", null: false
     t.string "family", null: false
     t.string "airway", null: false
     t.string "breathing", null: false

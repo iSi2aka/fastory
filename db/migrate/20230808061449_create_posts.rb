@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.string :disease,          null: false
       t.string :name,             null: false
       t.integer :age,             null: false
-      t.integer :sex,             null: false
+      t.integer :sex_id,          null: false
       t.string :family,           null: false
       t.string :airway,           null: false
       t.string :breathing,        null: false
