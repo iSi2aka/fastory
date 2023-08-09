@@ -107,6 +107,11 @@
     <%= f.text_area :point, placeholder: "" %>
   </div>
 
+  <div class="field">
+    <%= f.label "クリックして画像ファイルをアップロード" %><br />
+    <%= f.file_field :image, id:"item-image" %>
+  </div>
+
    <div class="sell-btn-contents">
     <%= f.submit "投稿する" ,class:"post-btn" %>
     <%=link_to 'もどる', root_path, class:"back-btn" %>
