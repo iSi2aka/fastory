@@ -1,5 +1,5 @@
-<h1>Posts#new</h1>
-<%= form_with model: @post, url: posts_path, class: 'post-new-main', local: true do |f| %>
+<h1>Posts#edit</h1>
+<%= form_with model: @post, url: post_path, class: 'post-new-main', local: true do |f| %>
   <%= render "devise/shared/error_messages", model: f.object %>
 
   <div class="field">
@@ -113,7 +113,7 @@
   </div>
 
    <div class="sell-btn-contents">
-    <%= f.submit "投稿する" ,class:"post-btn" %>
-    <%=link_to 'もどる', root_path, class:"back-btn" %>
+    <%= f.submit "変更する" ,class:"post-btn" %>
+    <%=link_to 'もどる', post_path(@post.id), class:"back-btn" %>
   </div>
 <% end %>
