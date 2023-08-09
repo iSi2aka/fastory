@@ -12,25 +12,27 @@
     </div>
 
     <div class='post-info'>
-      <div class='ABCDE'>
-        <%= @post.airway %>
-        <%= @post.breathing %>
-        <%= @post.circulation %>
-        <%= @post.dysfunction_cns %>
-        <%= @post.exposure %>
-      </div>
       <div class='AMPLER'>
-        <%= @post.allergy %>
-        <%= @post.medicine %>
-        <%= @post.past_history %>
-        <%= @post.last_meal %>
-        <%= @post.event %>
-        <%= @post.risk_factor %>
-        <%= @post.others %>
+        A) <%= @post.allergy %><br/>
+        M) <%= @post.medicine %><br/>
+        P) <%= @post.past_history %><br/>
+        L) <%= @post.last_meal %><br/>
+        R) <%= @post.risk_factor %><br/>
+        &) <%= @post.others %><br/>
+        <%#イニシャルで表している箇所はすべて適当なアイコンを表示%>
       </div>
     </div>
 
     <div class='post-story'>
+      <%= @post.symptom%><br/>
+      <%= @post.event %><br/>
+      <div class='ABCDE'>
+        <%= @post.airway %><br/>
+        <%= @post.breathing %><br/>
+        <%= @post.circulation %><br/>
+        <%= @post.dysfunction_cns %><br/>
+        <%= @post.exposure %>
+      </div>
       <%= @post.story %>
     </div>
 

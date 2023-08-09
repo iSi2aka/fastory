@@ -119,7 +119,7 @@ RSpec.describe Post, type: :model do
       it 'eventが空では投稿できない' do
         @post.event = ''
         @post.valid?
-        expect(@post.errors.full_messages).to include("イベントを入力してください")
+        expect(@post.errors.full_messages).to include("現病歴を入力してください")
       end
       it 'risk_factorが空では投稿できない' do
         @post.risk_factor = ''
@@ -129,7 +129,7 @@ RSpec.describe Post, type: :model do
       it 'storyが空では投稿できない' do
         @post.story = ''
         @post.valid?
-        expect(@post.errors.full_messages).to include("現病歴・経過を入力してください")
+        expect(@post.errors.full_messages).to include("院内の経過を入力してください")
       end
       it 'pointが空では投稿できない' do
         @post.point = ''

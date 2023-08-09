@@ -21,9 +21,9 @@ ja:
         medicine: 服薬歴
         past_history: 既往歴
         last_meal: 最終飲食
-        event: イベント
+        event: 現病歴
         risk_factor: 危険因子
         others: その他
-        story: 現病歴・経過
+        story: 院内の経過
         point: 評価項目
 
