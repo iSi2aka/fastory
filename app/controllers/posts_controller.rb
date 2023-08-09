@@ -36,6 +36,17 @@ class PostsController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    post = Post.find(params[:id])
+    unless current_user.id == post.user_id 
+      redirect_to root_path
+    else
+      post.destroy
+      redirect_to root_path
+    end
+  end
+
   private
 
   def post_params

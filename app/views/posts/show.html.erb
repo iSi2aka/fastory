@@ -45,7 +45,7 @@
     <%= "シナリオを実施する" %><br/>
     <% if current_user.id == @post.user_id %>
       <%= link_to "シナリオの編集", edit_post_path(@post) %>
-      <%= link_to "シナリオの削除", post_path(@post), data: { turbo_method: :delete } %>
+      <%= link_to "シナリオの削除", post_path(@post), data: { turbo_method: :delete }, confirm: "削除しますか？" %>
     <% else %>
       <%= "シナリオを添削する" %>
     <% end %>
