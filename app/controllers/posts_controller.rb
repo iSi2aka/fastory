@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @post = Post.includes(:user).order("created_at DESC")
@@ -16,6 +16,10 @@ class PostsController < ApplicationController
     else 
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   private

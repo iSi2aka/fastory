@@ -16,10 +16,12 @@
   <ul class='post-lists'>
     <% @post.each do |post| %>
       <li>
-        <%= post.title %>
-        <%= post.symptom %>
-        <%= post.age %>歳
-        <%= Sex.find(post.sex_id).name %>
+        <%= link_to post_path(post) do %>
+          <%= post.title %>
+          <%= post.symptom %>
+          <%= post.age %>歳
+          <%= Sex.find(post.sex_id).name %>
+        <% end %>
         作成者：<%= post.user.nickname %>
       </li>
 
