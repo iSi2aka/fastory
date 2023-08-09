@@ -24,7 +24,7 @@ class PostsController < ApplicationController
           .permit(:title, :disease, :name, :age, :sex_id, :family, 
                   :airway, :breathing, :circulation, :dysfunction_cns, :exposure,
                   :symptom, :allergy, :medicine, :past_history, :last_meal, :event, :risk_factor, :others, 
-                  :story, :point)
+                  :story, :point, :image)
           .merge(user_id: current_user.id)
   end
 end
