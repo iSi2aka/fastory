@@ -20,6 +20,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comment = @post.comments.order("created_at DESC")
   end
 
   def edit

@@ -3,8 +3,10 @@
   <%= render partial: "shared/scenario", locals: { post: @post } %>
 
 <%= form_with model: @comment, url: post_comments_path, class: 'comment-new-main', local: true do |f| %>
+  <%= render "shared/error_messages", model: f.object %>
+
   <div class="field">
-    <%= f.label "コメント" %><br />
+    <%= f.label "評価コメント" %><br />
     <%= f.text_area :comment, placeholder: "" %>
   </div>
 

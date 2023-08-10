@@ -14,5 +14,15 @@
   <% end %>
 </div>
 
+<div class='comment-index'>
+  <ul class='comment-lists'>
+    <% @comment.each do |comment| %>
+      <li>
+        実施日時：<%= comment.updated_at%>／
+        評価者：<%= comment.user.nickname %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 <%=link_to 'もどる', root_path, class:"back-btn" %>
