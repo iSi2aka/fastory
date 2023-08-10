@@ -1,6 +1,6 @@
 <h1>Posts#edit</h1>
 <%= form_with model: @post, url: post_path, class: 'post-new-main', local: true do |f| %>
-  <%= render "devise/shared/error_messages", model: f.object %>
+  <%= render "shared/error_messages", model: f.object %>
 
   <div class="field">
     <%= f.label "タイトル" %><span class="indispensable">必須</span><br />

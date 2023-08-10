@@ -1,48 +1,10 @@
 <h1>Posts#show</h1>
 
-<div class='post-show'>
-  <div class='show-header'>
-    <%= @post.name %> （<%= @post.age %>）
-    <%= Sex.find(@post.sex_id).name %>
-  </div>
+  <%= render partial: "shared/scenario", locals: { post: @post } %>
 
-  <div class='show-main'>
-    <div class='post-images'>
-      <%= link_to image_tag("ハートの心電図のアイコン素材 2.png", class:"image-icon"), @post.image if @post.image.attached?%>
-    </div>
-
-    <div class='post-info'>
-      <div class='AMPLER'>
-        A) <%= @post.allergy %><br/>
-        M) <%= @post.medicine %><br/>
-        P) <%= @post.past_history %><br/>
-        L) <%= @post.last_meal %><br/>
-        R) <%= @post.risk_factor %><br/>
-        &) <%= @post.others %><br/>
-        <%#イニシャルで表している箇所はすべて適当なアイコンを表示%>
-      </div>
-    </div>
-
-    <div class='post-story'>
-      <%= @post.symptom%><br/>
-      <%= @post.event %><br/>
-      <div class='ABCDE'>
-        <%= @post.airway %><br/>
-        <%= @post.breathing %><br/>
-        <%= @post.circulation %><br/>
-        <%= @post.dysfunction_cns %><br/>
-        <%= @post.exposure %>
-      </div>
-      <%= @post.story %>
-    </div>
-
-    <div class='post-point'>
-      <%= @post.point %>
-    </div>
-  </div>
-
+<div>
   <% if user_signed_in? %> 
-    <%= "シナリオを実施する" %><br/>
+    <%= link_to "シナリオを実施する", post_comments_path(@post) %><br/>
     <% if current_user.id == @post.user_id %>
       <%= link_to "シナリオの編集", edit_post_path(@post) %>
       <%= link_to "シナリオの削除", post_path(@post), data: { turbo_method: :delete, turbo_confirm: "シナリオを削除しますか？"} %>
@@ -50,7 +12,7 @@
       <%= "シナリオを添削する" %>
     <% end %>
   <% end %>
-
 </div>
+
 
 <%=link_to 'もどる', root_path, class:"back-btn" %>

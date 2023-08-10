@@ -1,0 +1,15 @@
+<h1>Comments#index</h1>
+
+  <%= render partial: "shared/scenario", locals: { post: @post } %>
+
+<%= form_with model: @comment, url: post_comments_path, class: 'comment-new-main', local: true do |f| %>
+  <div class="field">
+    <%= f.label "コメント" %><br />
+    <%= f.text_area :comment, placeholder: "" %>
+  </div>
+
+   <div class="sell-btn-contents">
+    <%= f.submit "投稿する" ,class:"post-btn" %>
+    <%=link_to 'もどる', post_path(@post), class:"back-btn" %>
+  </div>
+<% end %>
