@@ -26,4 +26,9 @@ ja:
         others: その他
         story: 院内の経過
         point: 評価項目
+        user: ログイン情報
+      comment:
+        comment: 評価コメント
+        post: シナリオ
+        user: ログイン情報
 

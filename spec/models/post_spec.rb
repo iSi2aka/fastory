@@ -136,6 +136,11 @@ RSpec.describe Post, type: :model do
         @post.valid?
         expect(@post.errors.full_messages).to include("評価項目を入力してください")
       end
+      it 'userが紐づいていないと投稿できない' do
+        @post.user = nil
+        @post.valid?
+        expect(@post.errors.full_messages).to include("ログイン情報を入力してください")
+      end
     end
   end
 end
