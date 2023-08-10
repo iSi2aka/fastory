@@ -1,9 +1,8 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_comment, only: [:index, :create]
+  before_action :authenticate_user!, except: :show
+  before_action :set_post, only: [:index, :create, :show]
 
   def index
-    @comments = @post.comments
     @comment = Comment.new
   end
 
@@ -16,13 +15,17 @@ class CommentsController < ApplicationController
     end
   end
 
+  def show
+    @comment = Comment.find(params[:id])
+  end
+
   private
 
   def comment_params
     params.require(:comment).permit(:comment).merge(user_id: current_user.id, post_id: params[:post_id])
   end
 
-  def set_comment
+  def set_post
     @post = Post.find(params[:post_id])
   end
 end

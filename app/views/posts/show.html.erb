@@ -18,8 +18,10 @@
   <ul class='comment-lists'>
     <% @comment.each do |comment| %>
       <li>
-        実施日時：<%= comment.updated_at%>／
-        評価者：<%= comment.user.nickname %>
+        <%= link_to post_comment_path(@post, comment) do %>
+          実施日時：<%= comment.updated_at %>／
+        <% end %>
+          評価者：<%= comment.user.nickname %>
       </li>
     <% end %>
   </ul>

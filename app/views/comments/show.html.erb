@@ -1,0 +1,10 @@
+<h1>Comments#show</h1>
+
+  <%= render partial: "shared/scenario", locals: { post: @post } %>
+
+<div class="">
+  <p>評価コメント：<%= @comment.updated_at%></p>
+  <%= @comment.comment %>
+</div>
+
+<%=link_to 'もどる', post_path(@post), class:"back-btn" %>
