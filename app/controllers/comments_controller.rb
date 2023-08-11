@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!, except: :show
-  before_action :set_post, only: [:index, :create, :show, :edit, :update]
+  before_action :set_post, except: :new
   before_action :set_comment, only: [:show, :edit, :update]
 
   def index
@@ -28,9 +28,19 @@ class CommentsController < ApplicationController
   def update
     @comment.update(comment_params)
     if @comment.save
-      redirect_to post_path(@post)
+      redirect_to post_comment_path(@post)
     else
       render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    unless current_user.id == comment.user_id 
+      redirect_to post_path(@post)
+    else
+      comment.destroy
+      redirect_to post_path(@post)
     end
   end
 
