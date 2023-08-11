@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!, except: :show
-  before_action :set_post, only: [:index, :create, :show]
+  before_action :set_post, only: [:index, :create, :show, :edit, :update]
+  before_action :set_comment, only: [:show, :edit, :update]
 
   def index
     @comment = Comment.new
@@ -16,7 +17,21 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @comment = Comment.find(params[:id])
+  end
+
+  def edit
+    unless current_user.id == @comment.user_id 
+      redirect_to post_path(@post)
+    end
+  end
+
+  def update
+    @comment.update(comment_params)
+    if @comment.save
+      redirect_to post_path(@post)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
@@ -27,5 +42,9 @@ class CommentsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:post_id])
+  end
+
+  def set_comment
+    @comment = Comment.find(params[:id])
   end
 end

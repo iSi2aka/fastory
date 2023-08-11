@@ -1,0 +1,12 @@
+<h1>Comments#edit</h1>
+<%= render partial: "shared/scenario", locals: { post: @post } %>
+
+<%= form_with model: @comment, url: post_comment_path, class: 'comment-new-main', local: true do |f| %>
+  
+  <%= render partial: "shared/comment_form", locals: { f: f } %>
+
+  <div class="sell-btn-contents">
+    <%= f.submit "変更する" ,class:"post-btn" %>
+    <%=link_to 'もどる', post_comment_path(@post), class:"back-btn" %>
+  </div>
+<% end %>
