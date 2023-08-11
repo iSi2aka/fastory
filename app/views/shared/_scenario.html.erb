@@ -6,8 +6,13 @@
 
   <div class='show-main'>
     <div class='post-images'>
-      <%= link_to image_tag("ハートの心電図のアイコン素材 2.png", class:"image-icon"), post.image if post.image.attached?%>
+      <%= link_to image_tag("ハートの心電図のアイコン素材 2.png",  class:"image-icon"), post.images[0] if post.images.attached? %>
+      <%= link_to image_tag("骸骨の無料アイコン19.png",           class:"image-icon"), post.images[1] if post.images.attached? %>
+      <%= link_to image_tag("献血の無料アイコン3.png",            class:"image-icon"), post.images[2] if post.images.attached? %>
+      <%= link_to image_tag("ノロウィルスアイコン.png",           class:"image-icon"), post.images[3] if post.images.attached? %>
+      <%= link_to image_tag("電波のアイコン.png",                class:"image-icon"), post.images[4] if post.images.attached? %>
     </div>
+  </div>
 
     <div class='post-info'>
       <div class='AMPLER'>

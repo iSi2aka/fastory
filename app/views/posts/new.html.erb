@@ -1,5 +1,5 @@
 <h1>Posts#new</h1>
-<%= form_with model: @post, url: posts_path, class: 'post-new-main', local: true do |f| %>
+<%= form_with model: @post, url: posts_path, class: 'post-new-main', id: 'new_post', local: true do |f| %>
   
   <%= render partial: "shared/form", locals: { f: f } %>
 

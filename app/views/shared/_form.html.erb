@@ -105,7 +105,10 @@
     <%= f.text_area :point, placeholder: "" %>
   </div>
 
-  <div class="field">
-    <%= f.label "クリックして画像ファイルをアップロード" %><br />
-    <%= f.file_field :image, id:"item-image" %>
-  </div>
+  <div class="image-field">
+      <div id="previews"></div>
+      <div class="click-upload">
+        <%= f.label "クリックして画像ファイルをアップロード" %><br />
+        <%= f.file_field :images, name: 'post[images][]', data: {index: 0} %>
+      </div>
+    </div>
