@@ -19,10 +19,6 @@ RSpec.describe Post, type: :model do
         @post.others = ''
         expect(@post).to be_valid
       end
-      it 'imageが空でも投稿できる' do
-        @post.image = nil
-        expect(@post).to be_valid
-      end
     end 
 
     context 'シナリオ投稿できない場合' do
@@ -140,6 +136,20 @@ RSpec.describe Post, type: :model do
         @post.user = nil
         @post.valid?
         expect(@post.errors.full_messages).to include("ログイン情報を入力してください")
+      end
+      it 'imagesが空だと投稿できない' do
+        @post.images = nil
+        @post.valid?
+        expect(@post.errors.full_messages).to include("画像を入力してください")
+      end
+      it 'imagesが6枚以上だと投稿できない' do
+        @post = FactoryBot.build(:post) do |item|
+          6.times do
+            item.images.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
+          end
+        end
+        @post.valid?
+        expect(@post.errors.full_messages).to include("画像は1枚以上5枚以下にしてください")
       end
     end
   end
