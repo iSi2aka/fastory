@@ -1,0 +1,14 @@
+<header class='top-header'>
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "logout" do %>
+      <%= image_tag("電源のアイコン素材.png", alt: "電源のアイコン素材", class: "header-icon") %>ログアウト
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path, class: "login" do %>
+      <%= image_tag("電源のアイコン素材.png", alt: "電源のアイコン素材", class: "header-icon") %>ログイン
+    <% end %>　　
+    <%= link_to new_user_registration_path, class: "sign-up" do %>
+      <%= image_tag("ログインドア　アイコン2.png", alt: "ログインドア　アイコン", class: "header-icon") %>新規登録          
+    <% end %>
+  <% end %>
+</header>
