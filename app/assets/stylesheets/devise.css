@@ -1,0 +1,47 @@
+.login-form{
+  width: 40%;
+  margin: 50px auto 0;
+}
+
+.login-field{
+  margin: 30px 0 20px;
+}
+
+.login-field label{
+  font-weight: 600;
+}
+
+.indispensable {
+  background: #aa8c5a;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.login-field textarea,
+.login-field input[type="email"],
+.login-field input[type="password"]{
+  height: 50px;
+  width: 100%;
+  resize: none;
+  border: 3px solid #f1f1f1;
+}
+
+.login-btn input[type=submit] {
+  height: 50px;
+  width: 80px;
+  color: black;
+  background-color: #f1f1f1;
+  border: 1px solid #aa8c5a;
+  border-bottom: 5px solid #aa8c5a;
+}
+
+.login-btn input[type=submit]:hover {
+  margin-top: 3px;
+  color: #aa8c5a;
+  background: #f1f1f1;
+  border: 1px solid #aa8c5a;
+}
