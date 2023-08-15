@@ -1,0 +1,93 @@
+.main-form{
+  width: 100%;
+  display: flex;
+}
+
+.basic-form{
+  width: 250px;
+  margin: 90px 0 0 30px;
+}
+
+.basic-form .field textarea,
+.basic-form .field input[type="text"],
+.basic-form .field select.select-box{
+  height: 50px;
+  width: 90%;
+  resize: none;
+  margin-bottom: 20px;
+  border: 3px solid #f1f1f1;
+}
+
+.ample-form{
+  width: 250px;
+  padding-right: 20px;
+  margin: 90px 0 0 30px;
+  border-right: 5px solid rgb(241, 241, 241);
+}
+
+.ample-form .field textarea{
+  height: 50px;
+  width: 90%;
+  resize: none;
+  margin-bottom: 20px;
+  border: 3px solid #f1f1f1;
+}
+
+.abcd-form{
+  width: 300px;
+  margin: 0 30px 0;
+}
+
+.abcd-form .field textarea{
+  height: 50px;
+  width: 90%;
+  resize: none;
+  margin-bottom: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+.abcd-form .event-field textarea{
+  height: 100px;
+  width: 90%;
+  resize: none;
+  margin-bottom: 10px;
+  border: 3px solid #f1f1f1;
+  font-size: 15px;
+}
+
+.info-form{
+  width: 600px;
+}
+
+.info-form .field textarea{
+  height: 160px;
+  width: 90%;
+  resize: none;
+  margin-bottom: 20px;
+  border: 3px solid #f1f1f1;
+}
+.copy-form{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+
+#copy{
+  width: 1px;
+  border: none;
+}
+
+.image-field{
+  margin-bottom: 20px;
+}
+
+#previews img {
+  height: 50px;
+  max-width: 50px;
+}
+
+.form-end{
+  display: flex;
+  justify-content: space-between;
+  color: #aa8c5a;
+}

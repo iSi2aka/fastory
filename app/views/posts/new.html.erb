@@ -1,10 +1,16 @@
-<h1>Posts#new</h1>
-<%= form_with model: @post, url: posts_path, class: 'post-new-main', id: 'new_post', local: true do |f| %>
-  
-  <%= render partial: "shared/form", locals: { f: f } %>
+<div class='main-body'>
+  <%= render "shared/side_header" %>
 
-  <div class="sell-btn-contents">
-    <%= f.submit "投稿する" ,class:"post-btn" %>
-    <%=link_to 'もどる', root_path, class:"back-btn" %>
-  </div>
-<% end %>
+  <%= form_with model: @post, url: posts_path, class: 'post-new-main', id: 'new_post', local: true do |f| %>
+    
+    <%= render partial: "shared/form", locals: { f: f } %>
+
+    <div class='form-end'>
+      <div class="btn-contents">
+        <%= f.submit "投稿する" %>
+      </div>
+      <%= render "shared/error_messages", model: f.object %>
+    </div>
+  <% end %>
+  
+</div>
