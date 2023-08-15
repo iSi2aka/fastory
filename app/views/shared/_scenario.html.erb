@@ -36,11 +36,11 @@
         <%= post.dysfunction_cns %><br/>
         <%= post.exposure %>
       </div>
-      <%= post.story %>
+      <%= simple_format(post.story) %>
     </div>
 
     <div class='post-point'>
-      <%= post.point %>
+      <%= simple_format(post.point) %>
     </div>
   </div>
 </div>

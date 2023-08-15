@@ -25,7 +25,7 @@ class Post < ApplicationRecord
     validates :risk_factor
     validates :story
     validates :point
-    validates :images,          length: { minimum: 1, maximum: 5, message: "は1枚以上5枚以下にしてください" }
+    validates :images,          length: { minimum: 1, maximum: 5, message: "は1枚以上5枚以下にしてください", allow_blank: true  }
   end
   
   belongs_to :user
