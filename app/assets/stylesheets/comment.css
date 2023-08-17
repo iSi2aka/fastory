@@ -1,0 +1,14 @@
+.comment-index{
+  width: 100%;
+  padding: 30px 10px 0;
+}
+
+
+
+.comment-show a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: #aa8c5a;
+}
