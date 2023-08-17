@@ -5,15 +5,15 @@
     </div>
     <div class='user'>
       <% if user_signed_in? %>
-        USER：<%= current_user.nickname %>
+        <%= current_user.nickname %>
       <% end %>
     </div>
-    </div>
+  </div>
   
   <div class='menu'>
     <%= link_to new_post_path, class: "new-post" do %>
-      <%= image_tag("メモ帳、書類のアイコン素材 その3.png", alt: "メモ帳のフリーアイコン素材", class: "image-icon") %>
-      NEWシナリオを作成する
+      <%= image_tag("メモ帳、書類のアイコン素材 その3 (1).png", alt: "メモ帳のフリーアイコン素材", class: "image-icon") %>
+      NEW
     <% end %>  
   </div>
 </div>

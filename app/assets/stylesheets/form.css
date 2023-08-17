@@ -35,7 +35,7 @@
 
 .abcd-form{
   width: 300px;
-  margin: 0 30px 0;
+  margin: 5px 30px;
 }
 
 .abcd-form .field textarea{
@@ -56,20 +56,20 @@
 }
 
 .info-form{
-  width: 600px;
+  width: 500px;
 }
 
 .info-form .field textarea{
-  height: 160px;
-  width: 90%;
+  height: 200px;
+  width: 100%;
   resize: none;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 3px solid #f1f1f1;
 }
+
 .copy-form{
   display: flex;
   justify-content: space-between;
-  padding-right: 50px;
 }
 
 #copy{
@@ -84,6 +84,7 @@
 #previews img {
   height: 50px;
   max-width: 50px;
+  margin-top: 5px;
 }
 
 .form-end{

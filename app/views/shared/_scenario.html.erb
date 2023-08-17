@@ -1,46 +1,17 @@
-<div class='post-show'>
-  <div class='show-header'>
-    <%= post.name %> （<%= post.age %>）
-    <%= Sex.find(post.sex_id).name %>
-  </div>
+<div class='post-info'>
+  主訴：<%= post.symptom%><br/>
+  <%= simple_format(post.event) %><br/><br/>
 
-  <div class='show-main'>
-    <div class='post-images'>
-      <%= link_to image_tag("ハートの心電図のアイコン素材 2.png",  class:"image-icon"), post.images[0] if post.images.attached? %>
-      <%= link_to image_tag("骸骨の無料アイコン19.png",           class:"image-icon"), post.images[1] if post.images.attached? %>
-      <%= link_to image_tag("献血の無料アイコン3.png",            class:"image-icon"), post.images[2] if post.images.attached? %>
-      <%= link_to image_tag("ノロウィルスアイコン.png",           class:"image-icon"), post.images[3] if post.images.attached? %>
-      <%= link_to image_tag("電波のアイコン.png",                class:"image-icon"), post.images[4] if post.images.attached? %>
-    </div>
-  </div>
+  気道：<%= post.airway %><br/>
+  呼吸：<%= post.breathing %><br/>
+  循環：<%= post.circulation %><br/>
+  意識：<%= post.dysfunction_cns %><br/>
+  <%= post.exposure %><br/><br/>
 
-    <div class='post-info'>
-      <div class='AMPLER'>
-        A) <%= post.allergy %><br/>
-        M) <%= post.medicine %><br/>
-        P) <%= post.past_history %><br/>
-        L) <%= post.last_meal %><br/>
-        R) <%= post.risk_factor %><br/>
-        &) <%= post.others %><br/>
-        <%#イニシャルで表している箇所はすべて適当なアイコンを表示%>
-      </div>
-    </div>
-
-    <div class='post-story'>
-      <%= post.symptom%><br/>
-      <%= post.event %><br/>
-      <div class='ABCDE'>
-        <%= post.airway %><br/>
-        <%= post.breathing %><br/>
-        <%= post.circulation %><br/>
-        <%= post.dysfunction_cns %><br/>
-        <%= post.exposure %>
-      </div>
-      <%= simple_format(post.story) %>
-    </div>
-
-    <div class='post-point'>
-      <%= simple_format(post.point) %>
-    </div>
-  </div>
+  アレルギー：<%= post.allergy %><br/>
+  服薬歴：<%= post.medicine %><br/>
+  既往歴：<%= post.past_history %><br/>
+  最終飲食：<%= post.last_meal %><br/>
+  危険因子：<%= post.risk_factor %><br/>
+  <%= post.others %><br/>
 </div>

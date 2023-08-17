@@ -1,30 +1,26 @@
-<h1>Posts#show</h1>
+<div class='main-body'>
+  <%= render "shared/side_header" %>
+  
+  <%= render partial: "shared/menus/post_show", locals: { post: @post } %>
+  
+  <div class='main'>
+    <%= render partial: "shared/top_header/pt_name", locals: { post: @post } %>
 
-  <%= render partial: "shared/scenario", locals: { post: @post } %>
+    <div class='post-show'>
+      <%= render partial: "shared/scenario", locals: { post: @post } %>
+      <div class='comment-index'>
+        <ul class='comment-lists'>
+          <% @comment.each do |comment| %>
+            <li class='comment-list'>
+              <%= link_to post_comment_path(@post, comment) do %>
+                実施：<%= comment.created_at.strftime('%Y/%m/%d')  %>
+              <% end %>
+              <%= comment.user.nickname %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
 
-<div>
-  <% if user_signed_in? %> 
-    <%= link_to "シナリオを実施する", post_comments_path(@post) %><br/>
-    <% if current_user.id == @post.user_id %>
-      <%= link_to "シナリオの編集", edit_post_path(@post) %>
-      <%= link_to "シナリオの削除", post_path(@post), data: { turbo_method: :delete, turbo_confirm: "シナリオを削除しますか？ 一度消すと元に戻せません！"} %>
-    <% else %>
-      <%= "シナリオを添削する" %>
-    <% end %>
-  <% end %>
+    </div>
+  </div>
 </div>
-
-<div class='comment-index'>
-  <ul class='comment-lists'>
-    <% @comment.each do |comment| %>
-      <li>
-        <%= link_to post_comment_path(@post, comment) do %>
-          実施日時：<%= comment.created_at %>／
-        <% end %>
-          評価者：<%= comment.user.nickname %>
-      </li>
-    <% end %>
-  </ul>
-</div>
-
-<%=link_to 'もどる', root_path, class:"back-btn" %>

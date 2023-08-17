@@ -1,0 +1,54 @@
+<div class='menus'>
+  <div class='menu-top'>
+    <div class='logo'>
+      <%= link_to image_tag("Fast.png", alt: "Fast", class: "logo-icon"), root_path %>
+    </div>
+    <div class='user'>
+      <% if user_signed_in? %>
+        <%= current_user.nickname %>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class='menu'>
+    <div class='post-images'>
+      <% if post.images.attached? %>
+        <%= link_to post.images[0] do %>
+          <%= image_tag "肺のアイコン素材 4 (1).png", class: "image-icon" %>
+          <%= post.images[0].filename if post.images[0] %>
+        <% end %>
+        <%= link_to post.images[1] do %>
+          <%= image_tag "ハートの心電図のアイコン素材 2.png", class: "image-icon" %>
+          <%= post.images[1].filename if post.images[1] %>
+        <% end %>
+        <%= link_to post.images[2] do %>
+          <%= image_tag "水滴アイコン4.png", class: "image-icon" %>
+          <%= post.images[2].filename if post.images[2] %>
+        <% end %>
+        <%= link_to post.images[3] do %>
+          <%= image_tag "献血アイコン1 (1).png", class: "image-icon" %>
+          <%= post.images[3].filename if post.images[3] %>
+        <% end %>
+        <%= link_to post.images[4] do %>
+          <%= image_tag "電波、ビーコンのアイコン.png", class: "image-icon" %>
+          <%= post.images[4].filename if post.images[4] %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class='menu-editor'>
+      <% if user_signed_in? %> 
+        <%= link_to "シナリオを実施する", post_comments_path(@post), data: { turbo_method: :get, turbo_confirm: "シナリオを開始しますか？"} %><br/>
+        <% if current_user.id == @post.user_id %>
+          <%= link_to edit_post_path(@post) do %>
+            <%= image_tag("フリーのギアアイコン.png", alt: "シナリオ", class: "header-icon") %>シナリオ 編集
+          <% end %>
+          <%= link_to post_path(@post), data: { turbo_method: :delete, turbo_confirm: "シナリオを削除しますか？ 一度消すと元に戻せません！"} do %>
+            <%= image_tag("ごみ箱のフリーアイコン.png", alt: "シナリオ", class: "header-icon") %>シナリオ 削除
+          <% end %>
+        <% end %>
+      <% end %>
+      <%=link_to 'トップへもどる', root_path, class:"back-btn" %>
+    </div>
+  </div>
+</div>
