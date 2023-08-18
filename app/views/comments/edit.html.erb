@@ -1,12 +1,30 @@
-<h1>Comments#edit</h1>
-<%= render partial: "shared/scenario", locals: { post: @post } %>
-
-<%= form_with model: @comment, url: post_comment_path, class: 'comment-new-main', local: true do |f| %>
+<div class='main-body'>
+  <%= render "shared/side_header" %>
   
-  <%= render partial: "shared/comment_form", locals: { f: f } %>
+  <%= render partial: "shared/menus/comment_index", locals: { post: @post } %>
+  
+  <div class='main'>
+    <%= render partial: "shared/top_header/pt_name", locals: { post: @post } %>
 
-  <div class="sell-btn-contents">
-    <%= f.submit "変更する" ,class:"post-btn" %>
-    <%=link_to 'もどる', post_comment_path(@post), class:"back-btn" %>
+    <div class='post-show'>
+      <div class="post-info">
+       <%= render partial: "shared/scenario", locals: { post: @post } %>
+       <%= simple_format(@post.story)%>
+      </div>
+      <div class='comment-index'>
+        評価ポイント<br/><br/>
+        <%= simple_format(@post.point) %>
+      </div>
+    </div>
+
+    <div class="comment-new">
+      <%= form_with model: @comment, url: post_comment_path, class: 'comment-new-main', local: true do |f| %>
+        <div class="field">
+          <%= f.text_area :comment, placeholder: "" %>
+        </div>
+        <div class="btn-contents">
+         <%= f.submit "変更する" ,class:"post-btn" %>
+       </div>
+    <% end %>
   </div>
-<% end %>
+</div>

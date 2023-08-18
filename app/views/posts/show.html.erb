@@ -7,7 +7,9 @@
     <%= render partial: "shared/top_header/pt_name", locals: { post: @post } %>
 
     <div class='post-show'>
-      <%= render partial: "shared/scenario", locals: { post: @post } %>
+      <div class='post-info'>
+       <%= render partial: 'shared/scenario', locals: { post: @post } %>
+      </div>
       <div class='comment-index'>
         <ul class='comment-lists'>
           <% @comment.each do |comment| %>
