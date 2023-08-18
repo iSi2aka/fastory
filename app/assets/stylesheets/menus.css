@@ -37,9 +37,9 @@
 }
 
 .new-post{
-  padding-top: 100px;
+  padding-top: 40px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .image-icon{
@@ -65,4 +65,10 @@
 
 .menu-editor{
   margin-top: 20px;
+}
+
+.search-input {
+  height: 25px;
+  width: 70%;
+  margin-bottom: 10px;
 }

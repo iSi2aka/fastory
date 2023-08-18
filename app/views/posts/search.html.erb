@@ -1,0 +1,35 @@
+<div class='main-body'>
+  <%= render "shared/side_header" %>
+  
+  <%= render "shared/menus/post_search"%>
+  
+  <div class='main'>
+   <%= render "shared/top_header/login" %>
+
+    <div class='post-index'>
+      <div class='top-page-image'>
+        <%= image_tag("top-image.png", class: "top-image") %>
+      </div>
+      <ul class='post-lists'>
+       <div class='post-list-top'>
+          <%= image_tag("scenarios.png", alt: "scenarios", class: "post-list-top") %>
+       </div>
+        <% @posts.each do |post| %>
+          <li class='post-list'>
+            <%= link_to post_path(post) do %>
+              <%= post.title %> 
+              <%= post.symptom %>
+            <% end %>
+            <div>
+              <%= post.age %>歳 
+              <%= Sex.find(post.sex_id).name %>　　　　　
+            </div>
+            作成者：<%= post.user.nickname %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <%= render "shared/footer"%>
+  </div>
+</div>
