@@ -12,9 +12,9 @@
       </div>
       <div class='comment-index'>
         <div >
-          <%= @comment.created_at.strftime('%Y/%m/%d')  %>　：
+          <%= @comment.created_at.strftime('%Y/%m/%d')  %>
           <%= @comment.user.nickname %><br/><br/>
-          <%= @comment.comment %>
+          <%= simple_format(@comment.comment) %>
         </div>
 
         <div class="comment-show">

@@ -55,6 +55,10 @@
   color: #aa8c5a;
 }
 
+.menu a:hover{
+  color: black;
+}
+
 .post-images{
   font-size: 8px;
 }
