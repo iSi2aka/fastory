@@ -10,7 +10,7 @@
   <div class='basic-form'>
     <div class="field">
       <%= f.label "タイトル" %><span class="indispensable">必須</span><br />
-      <%= f.text_area :title, placeholder: "胸痛の鑑別" %>
+      <%= f.text_area :title, placeholder: "※ネタバレ注意" %>
     </div>
 
     <div class="field">
@@ -89,12 +89,12 @@
 
     <div class="field">
       <%= f.label "B:呼吸" %><span class="indispensable">必須</span><br />
-      <%= f.text_area :breathing, placeholder: "呼吸正常" %>
+      <%= f.text_area :breathing, placeholder: "正常" %>
     </div>
 
     <div class="field">
       <%= f.label "C:循環" %><span class="indispensable">必須</span><br />
-      <%= f.text_area :circulation, placeholder: "脈拍 浅く速い" %>
+      <%= f.text_area :circulation, placeholder: "浅く速い" %>
     </div>
 
     <div class="field">
@@ -124,12 +124,14 @@
         }
         </script>
       </div>
-      <%= f.text_area :story, placeholder: "" %>
+      <%= f.text_area :story, 
+       placeholder: "院内到着直後のバイタル、処置後のバイタル etc...　※バイタルサインのテンプレートは上の「VS コピー」ボタンを押すとコピーできます。その他 患者の発言などを記入" %>
     </div>
 
     <div class="field">
       <%= f.label "評価項目" %><span class="indispensable">必須</span><br />
-      <%= f.text_area :point, placeholder: "" %>
+      <%= f.text_area :point, 
+       placeholder: "例）・バイタルサインを安定化する処置ができる" %>
     </div>
   <div>
 
