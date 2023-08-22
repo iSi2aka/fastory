@@ -54,12 +54,12 @@
   https://docs.google.com/spreadsheets/d/10VYZkj5GjLlgyt_4El4MQwUEDfb_zEXIk74_w4pe2lQ/edit#gid=982722306
 
 # 実装した機能についての画像やGIFおよびその説明
-  - https://gyazo.com/f5a429edf926d252062f3dd96770905b  一覧表示からシナリオ詳細表示
-  - https://gyazo.com/553a51170c79a2f20702798e0f261c0b  詳細表示から画像表示、コメント詳細表示
-  - https://gyazo.com/5d8f0e2e5cf2c99bef50a32752950d7f  シナリオ削除
-  - https://gyazo.com/bc4852bdb557bcd1050a9d093d6c53d0  検索機能
-  - https://gyazo.com/e6ee46e4001d4559793866d2da76a2ca  テンプレートのコピー機能
-  - https://gyazo.com/d7fedd9f9627b52f4b103552048bd0c0  画像プレビュー機能
+  - [一覧表示からシナリオ詳細表示](https://gyazo.com/f5a429edf926d252062f3dd96770905b)
+  - [詳細表示から画像表示、コメント詳細表示](https://gyazo.com/553a51170c79a2f20702798e0f261c0b)  
+  - [シナリオ削除](https://gyazo.com/5d8f0e2e5cf2c99bef50a32752950d7f)
+  - [検索機能](https://gyazo.com/bc4852bdb557bcd1050a9d093d6c53d0) 
+  - [テンプレートのコピー機能](https://gyazo.com/e6ee46e4001d4559793866d2da76a2ca) 
+  - [画像プレビュー機能](https://gyazo.com/d7fedd9f9627b52f4b103552048bd0c0)  
 
 # 実装予定の機能	
 - 作成途中のシナリオを一時保存できる機能
