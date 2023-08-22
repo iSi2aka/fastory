@@ -20,8 +20,8 @@
 # テスト用アカウント	
 - Basic認証 ID：fast
 - Basic認証 パスワード：3256
-- ユーザーメールアドレス：
-- ユーザーパスワード：
+- ユーザーメールアドレス：test@test
+- ユーザーパスワード：test123
 
 # 利用方法	
   ### シナリオ作成
@@ -65,10 +65,10 @@
 - 作成途中のシナリオを一時保存できる機能
 
 # データベース設計	
-  ![ER図](https://gyazo.com/556a506dde78372291dddc903547e0eb)
+![ER図](https://gyazo.com/556a506dde78372291dddc903547e0eb)
 
 # 画面遷移図	
-  ![画面遷移図](https://gyazo.com/974fe913535a858d6e2a3cece8c983fa)
+![画面遷移図](https://gyazo.com/974fe913535a858d6e2a3cece8c983fa)
 
 # 開発環境	
 - フレームワーク：Ruby on rails ver.7
