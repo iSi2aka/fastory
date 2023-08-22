@@ -11,13 +11,13 @@
        <%= render partial: "shared/scenario", locals: { post: @post } %>
       </div>
       <div class='comment-index'>
-        <div >
+        <div>
           <%= @comment.created_at.strftime('%Y/%m/%d')  %>
           <%= @comment.user.nickname %><br/><br/>
           <%= simple_format(@comment.comment) %>
         </div>
 
-        <div class="comment-show">
+        <div class="comment-edit">
           <% if user_signed_in? %> 
             <% if current_user.id == @comment.user_id %>
                <%= link_to edit_post_comment_path(@post, @comment) do %>

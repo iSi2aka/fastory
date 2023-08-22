@@ -1,4 +1,5 @@
 .post-show{
+  height: calc(100vh - 38vh);
   width: 100%;
   display: flex;
 }
@@ -7,11 +8,14 @@
   width: 70%;
   border-right: 5px solid rgb(241, 241, 241);
   overflow: auto;
-  padding: 40px 10px 0 20px;
+  padding: 40px 10px 10px 20px;
+  font-size: 1.2vw;
 }
 
 .comment-index{
   width: 30%;
+  font-size: 1.2vw;
+  padding: 30px 20px 0;
 }
 
 .comment-lists{
@@ -19,7 +23,6 @@
   flex-direction: column;
   align-items: flex-end;
   box-sizing: border-box;
-  padding: 20px;
 }
 
 .comment-list{
@@ -34,7 +37,6 @@
   margin-bottom: 50px;
   padding: 0 10px;
   box-sizing: border-box;
-  font-family: monospace;
 }
 
 .comment-list a{
@@ -47,6 +49,33 @@
   color: #aa8c5a;
 }
 
-.menu-editor a{
-  margin-bottom: 10px;
+.comment-edit a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: #aa8c5a;
+}
+
+.comment-edit a:hover{
+  color: black;
+}
+
+.comment-new{
+  height: 30vh;
+  width: 100%;
+  border-top: 3px solid rgb(241, 241, 241);
+  padding: 0 20px;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+
+}
+
+.comment-new-main textarea{
+  height: 18vh;
+  width: 100%;
+  margin-top: 20px;
+  resize: none;
+  border: none;
+  background-color: white;
 }

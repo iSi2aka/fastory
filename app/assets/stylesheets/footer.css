@@ -1,7 +1,7 @@
 .footer{
   height: 170px;
-  width: 100%;
-  margin-top: 200px;
+  width: calc(100vw - 26vw);
+  margin-top: 350px;
   background-color: rgb(241, 241, 241);
 }
 
