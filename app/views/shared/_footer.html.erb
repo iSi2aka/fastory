@@ -1,9 +1,19 @@
 <footer class='footer'>
+  <%= image_tag("Fastory.png", alt: "Fastory", class: "footer-logo") %>
+
   <ul class='footer-ul'>
     <li class='footer-list'>
-      <%= image_tag("Fastory.png", alt: "Fastory", class: "footer-logo") %>
+      <%= link_to("看護roo!", "https://www.kango-roo.com", class: "footer-link") %>
     </li>
-    <li class='footer-list'></li>
-    <li class='footer-list'></li>
+    <li class='footer-list'>
+      <%= link_to("画像診断Cafe", "http://medicalimagecafe.com", class: "footer-link") %>
+    </li>
+    <li class='footer-list'>
+      <%= link_to("PMDA", "https://www.pmda.go.jp", class: "footer-link") %>
+    </li>
+    <li class='footer-list'>
+      <%= link_to("医師国試 過去問集", "https://medical-illustration.club/kakomon-chart/med", class: "footer-link") %>
+    </li>
+    
   </ul>
 </footer>

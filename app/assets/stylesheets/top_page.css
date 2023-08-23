@@ -26,6 +26,7 @@
   flex-direction: column;
   align-items: flex-end;
   box-sizing: border-box;
+  margin-bottom: 350px;
   padding: 50px;
 }
 

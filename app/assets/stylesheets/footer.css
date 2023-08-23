@@ -1,10 +1,28 @@
 .footer{
-  height: 170px;
+  height: 28vh;
   width: calc(100vw - 26vw);
-  margin-top: 350px;
   background-color: rgb(241, 241, 241);
+  margin-top: 2vh;
 }
 
 .footer-logo{
-  height: 80px;
+  height: 10vh;
+  margin-left: 20px;
+}
+
+.footer-ul{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  font-size: 1vw;
+}
+
+.footer-ul a{
+  text-decoration: none;
+  color: #aa8c5a;
+}
+
+.footer-ul a:hover{
+  text-decoration: underline;
+  color: black;
 }
