@@ -113,16 +113,8 @@
       <div class='copy-form'>
         <div><%= f.label "院内の経過" %><span class="indispensable">必須</span><br /></div>
 
-        <div><button type="button" onclick="cp()">VS コピー</button>
-        <input id="copy" type="text" value=
-        " 後のバイタルサイン  RR:  SpO2: %  HR:  BP: / mmHg  ECG:  JCS:  MMT:" readonly></div>
-        <script>
-        function cp(){
-          var txt = document.getElementById("copy");
-          txt.select();
-          document.execCommand("Copy");
-        }
-        </script>
+        <%= render "shared/copy"%>
+      
       </div>
       <%= f.text_area :story, 
        placeholder: "院内到着直後のバイタル、処置後のバイタル etc...　※バイタルサインのテンプレートは上の「VS コピー」ボタンを押すとコピーできます。その他 患者の発言などを記入" %>
