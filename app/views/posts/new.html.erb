@@ -7,7 +7,8 @@
 
     <div class='form-end'>
       <div class="btn-contents">
-        <%= f.submit "投稿する" %>
+        <%= f.submit "投稿する" %><br/>
+        一時保存する場合はタイトルを「下書き」とし、必須項目に適当な文字を記入してください。
       </div>
       <%= render "shared/error_messages", model: f.object %>
     </div>

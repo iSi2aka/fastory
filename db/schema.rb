@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_10_025259) do
   end
 
   create_table "posts", charset: "utf8", force: :cascade do |t|
-    t.string "title", null: false
+    t.integer "title_id", null: false
     t.string "disease", null: false
     t.string "name", null: false
     t.integer "age", null: false

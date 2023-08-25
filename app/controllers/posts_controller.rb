@@ -49,14 +49,14 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:keyword]).order("created_at DESC")
+    @posts = Post.search(params[:title_id]).order("created_at DESC")
   end
 
   private
 
   def post_params
     params.require(:post)
-          .permit(:title, :disease, :name, :age, :sex_id, :family, 
+          .permit(:title_id, :disease, :name, :age, :sex_id, :family, 
                   :airway, :breathing, :circulation, :dysfunction_cns, :exposure,
                   :symptom, :allergy, :medicine, :past_history, :last_meal, :event, :risk_factor, :others, 
                   :story, :point, {images: []})

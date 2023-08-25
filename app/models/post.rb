@@ -1,9 +1,11 @@
 class Post < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :title
   belongs_to :sex
 
+    validates :title_id,        numericality: { other_than: 1, message: "を入力してください" }
+  
   with_options presence: true do
-    validates :title
     validates :disease
     validates :name
     validates :age,             numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 100, allow_blank: true }
@@ -34,7 +36,7 @@ class Post < ApplicationRecord
 
   def self.search(search)
     if search != ""
-      Post.where('title LIKE(?)', "%#{search}%")
+      Post.where('title_id LIKE(?)', "%#{search}%")
     else
       Post.all
     end

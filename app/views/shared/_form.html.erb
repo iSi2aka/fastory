@@ -10,7 +10,7 @@
   <div class='basic-form'>
     <div class="field">
       <%= f.label "タイトル" %><span class="indispensable">必須</span><br />
-      <%= f.text_area :title, placeholder: "※ネタバレ注意" %>
+      <%= f.collection_select(:title_id, Title.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
 
     <div class="field">

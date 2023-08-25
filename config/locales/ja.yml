@@ -5,7 +5,7 @@ ja:
         nickname: ニックネーム
         department: 所属
       post:
-        title: タイトル
+        title_id: タイトル
         disease: 疾患名
         name: 患者名
         age: 年齢

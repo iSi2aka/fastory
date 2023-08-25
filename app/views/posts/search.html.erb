@@ -1,7 +1,7 @@
 <div class='main-body'>
   <%= render "shared/side_header" %>
   
-  <%= render "shared/menus/post_search"%>
+  <%= render "shared/menus/post_index"%>
   
   <div class='main'>
    <%= render "shared/top_header/login" %>
@@ -17,7 +17,7 @@
         <% @posts.each do |post| %>
           <li class='post-list'>
             <%= link_to post_path(post) do %>
-              <%= post.title %> 
+              <%= Title.find(post.title_id).name %> 
               <%= post.symptom %>
             <% end %>
             <div>
