@@ -35,8 +35,8 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   def self.search(search)
-    if search != ""
-      Post.where('title_id LIKE(?)', "%#{search}%")
+    if search.present?
+      Post.where('title_id LIKE ?', "%#{search}%")
     else
       Post.all
     end
