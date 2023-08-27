@@ -1,18 +1,22 @@
 <div>
-  主訴：<%= post.symptom%><br/>
-  <%= simple_format(post.event) %><br/><br/>
+  <% if post.title_id != 2 %> <%#下書きは表示しないようにする%>
+    主訴：<%= post.symptom%><br/>
+    <%= simple_format(post.event) %><br/><br/>
 
-  気道：<%= post.airway %><br/>
-  呼吸：<%= post.breathing %><br/>
-  循環：<%= post.circulation %><br/>
-  意識：<%= post.dysfunction_cns %><br/>
-  <%= post.exposure %><br/><br/>
+    気道：<%= post.airway %><br/>
+    呼吸：<%= post.breathing %><br/>
+    循環：<%= post.circulation %><br/>
+    意識：<%= post.dysfunction_cns %><br/>
+    <%= post.exposure %><br/><br/>
 
-  アレルギー：<%= post.allergy %><br/>
-  服薬歴：<%= post.medicine %><br/>
-  既往歴：<%= post.past_history %><br/>
-  最終飲食：<%= post.last_meal %><br/>
-  危険因子：<%= post.risk_factor %><br/>
-  同乗者：<%= post.family %><br/>
-  <%= post.others %><br/>
+    アレルギー：<%= post.allergy %><br/>
+    服薬歴：<%= post.medicine %><br/>
+    既往歴：<%= post.past_history %><br/>
+    最終飲食：<%= post.last_meal %><br/>
+    危険因子：<%= post.risk_factor %><br/>
+    同乗者：<%= post.family %><br/>
+    <%= post.others %><br/>
+  <% else %>
+   下書きは閲覧できません
+  <% end %>
 </div>

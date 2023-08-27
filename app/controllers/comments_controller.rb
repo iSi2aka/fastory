@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!, except: :show
   before_action :set_post, except: :new
   before_action :set_comment, only: [:show, :edit, :update]
+  before_action :draft, only: [:index, :create, :show]
 
   def index
     @comment = Comment.new
@@ -57,4 +58,11 @@ class CommentsController < ApplicationController
   def set_comment
     @comment = Comment.find(params[:id])
   end
+
+  def draft
+    if @post.title_id == 2
+      redirect_to post_path(@post)
+    end
+  end 
+
 end
