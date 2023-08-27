@@ -16,6 +16,7 @@
   width: 30%;
   font-size: 1.2vw;
   padding: 30px 20px 0;
+  overflow: auto;
 }
 
 .comment-lists{
