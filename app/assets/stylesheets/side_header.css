@@ -13,13 +13,13 @@
 .side-header-bar{
   height: 60px;
   width: 100%;
-  border-right: 5px solid #aa8c5a;
+  border-right: 5px solid #0999af;
 }
 
 .side-header-bar2{
   height: 300px;
   width: 100%;
-  border-right: 5px solid #aa8c5a;
+  border-right: 5px solid #0999af;
   display: flex;
   justify-content: center;
   align-items: center;

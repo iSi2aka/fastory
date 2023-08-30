@@ -39,7 +39,7 @@
   height: 75px;
   width: 55%;
   background-color: rgba(241, 241, 241, 0.8);
-  border-left: 10px solid #aa8c5a;
+  border-left: 10px solid #0999af;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -58,6 +58,6 @@
 }
 
 .post-list a:hover{
-  color: #aa8c5a;
+  color: #0999af;
 }
 

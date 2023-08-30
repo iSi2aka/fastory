@@ -12,7 +12,7 @@
 }
 
 .indispensable {
-  background: #aa8c5a;
+  background: #0999af;
   margin-left: 8px;
   padding: 3px;
   border-radius: 2px;
@@ -35,15 +35,15 @@
   width: 80px;
   color: black;
   background-color: #f1f1f1;
-  border: 1px solid #aa8c5a;
-  border-bottom: 5px solid #aa8c5a;
+  border: 1px solid #0999af;
+  border-bottom: 5px solid #0999af;
   border-radius: 5px;
 }
 
 .btn-contents input[type=submit]:hover {
   margin-top: 3px;
-  color: #aa8c5a;
+  color: #0999af;
   background: #f1f1f1;
-  border: 1px solid #aa8c5a;
+  border: 1px solid #0999af;
   border-radius: 5px;
 }
