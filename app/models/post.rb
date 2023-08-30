@@ -12,22 +12,30 @@ class Post < ApplicationRecord
   end
     validates :sex_id,          numericality: { other_than: 1, message: "を入力してください" }
   
-  with_options presence: true do
-    validates :family
-    validates :airway
-    validates :breathing
-    validates :circulation
-    validates :dysfunction_cns
-    validates :symptom
-    validates :allergy
-    validates :medicine
-    validates :past_history
-    validates :last_meal
-    validates :event
-    validates :risk_factor
-    validates :story
-    validates :point
-    validates :images,          length: { minimum: 1, maximum: 5, message: "は1枚以上5枚以下にしてください", allow_blank: true  }
+ with_options unless: -> { title_id == 2 } do
+    with_options presence: true do
+      validates :family
+      validates :airway
+      validates :breathing
+      validates :circulation
+      validates :dysfunction_cns
+      validates :symptom
+      validates :allergy
+      validates :medicine
+      validates :past_history
+      validates :last_meal
+      validates :event
+      validates :risk_factor
+      validates :story
+      validates :point
+      validates :images,          length: { minimum: 1, maximum: 5, message: "は1枚以上5枚以下にしてください", allow_blank: true  }
+    end
+  end 
+
+  with_options if: -> { title_id == 2 } do
+    validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 100, allow_blank: true }
+    validates :sex_id, numericality: { other_than: 1, message: "を入力してください" }
+    validates :symptom, presence: true
   end
   
   belongs_to :user
