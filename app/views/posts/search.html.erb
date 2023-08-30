@@ -17,8 +17,8 @@
         <% @posts.each do |post| %>
           <li class='post-list'>
             <%= link_to post_path(post) do %>
-              <%= Title.find(post.title_id).name %> 
               <%= post.symptom %>
+              <%= Title.find(post.title_id).name %> 
             <% end %>
             <div>
               <%= post.age %>歳 
