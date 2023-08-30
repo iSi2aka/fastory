@@ -9,7 +9,7 @@
   </div>
   <div class='basic-form'>
     <div class="field">
-      <%= f.label "タイトル" %><span class="indispensable">必須</span><br />
+      <%= f.label "カテゴリー" %><span class="indispensable">必須</span><br />
       <%= f.collection_select(:title_id, Title.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
 
