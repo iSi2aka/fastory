@@ -41,6 +41,7 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many_attached :images
   has_many :comments, dependent: :destroy
+  has_many :likes
 
   def self.search(search)
     if search.present?
@@ -48,5 +49,9 @@ class Post < ApplicationRecord
     else
       Post.all
     end
+  end
+
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
   end
 end

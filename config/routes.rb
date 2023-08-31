@@ -6,5 +6,6 @@ Rails.application.routes.draw do
       get 'search'
     end
     resources :comments
+    resource :likes, only: [:create, :destroy]
   end
 end

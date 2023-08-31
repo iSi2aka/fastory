@@ -24,7 +24,12 @@
               <%= post.age %>歳 
               <%= Sex.find(post.sex_id).name %>　　　　　
             </div>
-            作成者：<%= post.user.nickname %>
+            <%= post.user.nickname %>
+
+            <div id="like-btn<%= post.id %>">
+              <%= render partial: "shared/like", locals: { post: post } %>
+            </div>
+            
           </li>
         <% end %>
       </ul>
