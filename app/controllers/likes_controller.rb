@@ -19,5 +19,8 @@ class LikesController < ApplicationController
 
   def set_post
     @post = Post.find(params[:post_id])
+    if @post.nil?
+      redirect_to root_path
+    end
   end
 end
