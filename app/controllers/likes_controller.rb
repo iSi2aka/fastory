@@ -3,26 +3,21 @@ class LikesController < ApplicationController
 
   def create
     like = current_user.likes.build(post_id: params[:post_id])
-    if like.save
-      respond_to do |format|
-        format.js
-      end
-    end 
+    like.save
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy
     like = Like.find_by(post_id: params[:post_id], user_id: current_user.id)
-    if like.destroy
-      respond_to do |format|
-        format.js
-      end
+    like.destroy
+    respond_to do |format|
+      format.js
     end
   end
 
   def set_post
     @post = Post.find(params[:post_id])
-    if @post.nil?
-      redirect_to root_path
-    end
   end
 end

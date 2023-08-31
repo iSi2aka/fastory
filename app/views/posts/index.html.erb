@@ -28,7 +28,7 @@
               <%= post.user.nickname %>
 
               <div id="like-btn<%= post.id %>">
-                <%= render partial: "shared/like", locals: { post: post } %>
+                <%= render partial: "likes/like", locals: { post: post } %>
               </div>
 
             </li>
