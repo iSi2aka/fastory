@@ -1,5 +1,8 @@
 <header class='top-header'>
   <% if user_signed_in? %>
+   <div class='user'>
+      <%= current_user.nickname %>
+    </div>
     <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "logout" do %>
       <%= image_tag("電源のアイコン素材.png", alt: "電源のアイコン素材", class: "header-icon") %>ログアウト
     <% end %>

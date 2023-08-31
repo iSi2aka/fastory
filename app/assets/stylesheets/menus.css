@@ -9,30 +9,17 @@
 }
 
 .menu-top{
-  height: 110px;
-  width: 100%;
-}
-
-.logo{
-  height: 60px;
+  height: 16vh;
   width: 100%;
 }
 
 .logo-icon{
   width: 14vw;
-  margin: 8px 0 0 20px;
-}
-
-.user{
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-  margin-top: 30px;
-  font-size: 1vw;
+  margin: 2vh 0 0 20px;
 }
 
 .menu{
-  margin-top: 50px;
+  margin-top: 9vh;
   padding-left: 4vw;
 }
 
@@ -43,14 +30,14 @@
 }
 
 .image-icon{
-  height: 35px;
-  margin: 0 10px 30px 0;
+  height: 5vh;
+  width: 3vw;
+  margin: 0 10px 5vh 0;
 }
 
 .menu a{
   text-decoration: none;
   display: flex;
-  margin-bottom: 5px;
   color: #0999af;
 }
 
@@ -59,7 +46,8 @@
 }
 
 .menu-editor a{
-  margin-bottom: 10px;
+  margin-bottom: 2vh;
+  font-size: calc(min(2vw, 2vh));
 }
 
 .post-images{
@@ -68,7 +56,8 @@
 }
 
 .search-input {
-  height: 25px;
+  height: 4vh;
   width: 70%;
-  margin-bottom: 10px;
+  margin-bottom: 2vh;
+  font-size: calc(min(1.5vw, 2vh));
 }

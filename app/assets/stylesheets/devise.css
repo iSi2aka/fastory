@@ -31,8 +31,9 @@
 }
 
 .btn-contents input[type=submit] {
-  height: 50px;
-  width: 80px;
+  height: 6vh;
+  width: 6vw;
+  font-size: calc(min(1.5vw, 2vh));
   color: black;
   background-color: #f1f1f1;
   border: 1px solid #0999af;
