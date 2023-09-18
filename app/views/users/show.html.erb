@@ -1,1 +1,15 @@
 <p><%= @nickname %>さんの投稿一覧</p>
+合計　❤×<%= @user.likes.count %>いいね
+<h1><%= current_user.nickname %> がいいねした投稿一覧</h1>
+<% if current_user.likes.any? %>
+  <ul>
+    <% current_user.likes.each do |like| %>
+      <li>
+        <%= link_to like.post.title.name, post_path(like.post) %>
+        <%= like.post.user.nickname%>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>いいねした投稿はありません。</p>
+<% end %>
