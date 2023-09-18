@@ -1,15 +1,50 @@
-<p><%= @nickname %>さんの投稿一覧</p>
-合計　❤×<%= @user.likes.count %>いいね
-<h1><%= current_user.nickname %> がいいねした投稿一覧</h1>
-<% if current_user.likes.any? %>
-  <ul>
-    <% current_user.likes.each do |like| %>
-      <li>
-        <%= link_to like.post.title.name, post_path(like.post) %>
-        <%= like.post.user.nickname%>
-      </li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>いいねした投稿はありません。</p>
-<% end %>
+<div class='main-body'>
+  <%= render "shared/side_header" %>
+  
+  <%= render "shared/menus/user_show"%>
+  
+  <div class='main'>
+    <%= render "shared/top_header/user_page" %>
+
+    <div class="user-show">
+      <div class='create-scenario'>
+        <h1><%= current_user.nickname %> が投稿したシナリオ</h1>
+        <% if current_user.posts.any? %>
+          <ul class='user-lists'>
+            <% current_user.posts.each do |post| %>
+              <li class='user-list'>
+                <%= link_to post_path(post) do %>
+                  <%= post.symptom %>
+                  <%= post.title.name %>
+                <% end %>
+                <%= post.likes.count%>
+              </li>
+            <% end %>
+          </ul>
+        <% else %>
+          <p>投稿したシナリオはありません。</p>
+        <% end %>
+      </div>
+        
+      <div class="like-scenario">
+        <h1><%= current_user.nickname %> がいいねしたシナリオ</h1>
+        <% if current_user.likes.any? %>
+          <ul class='user-lists'>
+            <% current_user.likes.each do |like| %>
+              <li class='user-list'>
+                <%= link_to post_path(like.post) do %>
+                  <%= like.post.symptom %>
+                  <%= like.post.title.name %>
+                <% end %>
+                <%= like.post.user.nickname%>
+              </li>
+            <% end %>
+          </ul>
+          <% else %>
+            <p>いいねしたシナリオはありません。</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

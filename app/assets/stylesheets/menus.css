@@ -61,3 +61,12 @@
   margin-bottom: 2vh;
   font-size: calc(min(1.5vw, 2vh));
 }
+
+.total-like{
+  margin-top: 9vh;
+}
+
+span{
+  font-size: 1.5vw;
+  color: rgb(75, 75, 75);
+}
