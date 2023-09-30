@@ -7,7 +7,7 @@
     
     <div class='form-end'>
       <div class="btn-contents">
-        <%= f.submit "変更する" %><br/><br/>
+        <%= f.submit "変更する", data: { turbo_method: :get, turbo_confirm: ( render "shared/error_messages", model: f.object ) } %><br/><br/>
         ※画像を編集する際は すべて選びなおしてください<br/>
         　編集しなければ データは失われません
 

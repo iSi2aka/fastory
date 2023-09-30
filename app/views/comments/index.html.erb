@@ -23,7 +23,7 @@
           <%= f.text_area :comment, placeholder: "" %>
         </div>
         <div class="btn-contents">
-          <%= f.submit "投稿する" ,class:"post-btn" %>
+          <%= f.submit "投稿する", data: { turbo_method: :get, turbo_confirm: ( render "shared/error_messages", model: f.object ) } ,class:"post-btn" %>
         </div>
       <% end %>
    </div>
