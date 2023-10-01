@@ -7,10 +7,17 @@
     <%= link_to new_post_path, class: "new-post" do %>
       <%= image_tag("メモ帳、書類のアイコン素材 その3 (1).png", alt: "メモ帳のフリーアイコン素材", class: "image-icon") %>
       NEW
-    <% end %>  
+    <% end %>
+    
+    <%= link_to edit_user_registration_path, class: "new-post" do %>
+      <%= image_tag("人物線画アイコン　プラス.png", alt: "人物のアイコン", class: "image-icon") %>
+      EDIT
+    <% end %>
+
     <div class="total-like", style="display: flex; align-items: center;">
       <%= image_tag "ハートのアイコン素材 1 (灰).png", class: "image-icon" %>
       <span style="margin: 0 0 20px 5px;"><%= "×#{@user.posts.joins(:likes).count}" %></span>
     </div>
+    
   </div>
 </div>
