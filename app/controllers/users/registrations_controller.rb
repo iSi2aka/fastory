@@ -2,8 +2,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   protected
 
   def update_resource(resource, params)
-    if resource.update_without_password(user_params)
-    end
+    resource.update_without_password(user_params)
   end
 
   def after_update_path_for(resource)

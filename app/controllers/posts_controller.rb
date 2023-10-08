@@ -49,7 +49,8 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:title_id]).order("created_at DESC")
+    @posts_by_title = Post.where('title_id = ?', params[:title_id]).order("created_at DESC")
+    @posts_by_keyword = Post.where('symptom LIKE ?', "%#{params[:keyword]}%").order("created_at DESC")
   end
 
   private

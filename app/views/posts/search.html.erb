@@ -14,24 +14,44 @@
        <div class='post-list-top'>
           <%= image_tag("scenarios.png", alt: "scenarios", class: "post-list-top") %>
        </div>
-        <% @posts.each do |post| %>
-          <li class='post-list'>
-            <%= link_to post_path(post) do %>
-              <%= post.symptom %>
-              <%= Title.find(post.title_id).name %> 
-            <% end %>
-            <div>
-              <%= post.age %>歳 
-              <%= Sex.find(post.sex_id).name %>　　　　　
-            </div>
-            <%= post.user.nickname %>
 
-            <div id="like-btn<%= post.id %>">
-              <%= render partial: "likes/like", locals: { post: post } %>
-            </div>
-            
-          </li>
+        <% if @posts_by_title.present? %>
+          <% @posts_by_title.each do |post| %>
+            <li class='post-list'>
+              <%= link_to post_path(post) do %>
+                <%= post.symptom %>
+                <%= Title.find(post.title_id).name %> 
+              <% end %>
+              <div>
+                <%= post.age %>歳 
+                <%= Sex.find(post.sex_id).name %>　　　　　
+              </div>
+              <%= post.user.nickname %>
+              <div id="like-btn<%= post.id %>">
+                <%= render partial: "likes/like", locals: { post: post } %>
+              </div>
+            </li>
+          <% end %>
+
+        <% else %>
+          <% @posts_by_keyword.each do |post| %>
+            <li class='post-list'>
+              <%= link_to post_path(post) do %>
+                <%= post.symptom %>
+                <%= Title.find(post.title_id).name %> 
+              <% end %>
+              <div>
+                <%= post.age %>歳 
+                <%= Sex.find(post.sex_id).name %>　　　　　
+              </div>
+              <%= post.user.nickname %>
+              <div id="like-btn<%= post.id %>">
+                <%= render partial: "likes/like", locals: { post: post } %>
+              </div>
+            </li>
+          <% end %>
         <% end %>
+
       </ul>
     </div>
     <%= render "shared/footer"%>

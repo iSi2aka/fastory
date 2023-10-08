@@ -46,6 +46,7 @@ class Post < ApplicationRecord
   def self.search(search)
     if search.present?
       Post.where("title_id = #{search}")
+      Post.where('symptom LIKE(?)', "%#{search}%")
     else
       Post.all
     end
