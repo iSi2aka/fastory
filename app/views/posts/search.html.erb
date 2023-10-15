@@ -11,9 +11,6 @@
         <%= image_tag("top-image.png", class: "top-image") %>
       </div>
       <ul class='post-lists'>
-       <div class='post-list-top'>
-          <%= image_tag("scenarios.png", alt: "scenarios", class: "post-list-top") %>
-       </div>
 
         <% if @posts_by_title.present? %>
           <% @posts_by_title.each do |post| %>
@@ -57,3 +54,14 @@
     <%= render "shared/footer"%>
   </div>
 </div>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal({ 
+    reset: false, 
+    distance: "10px",
+    duration: 1000,
+    delay: 100,
+    });
+  ScrollReveal().reveal('.top-image', { delay: 200, origin: "bottom" });
+</script>
