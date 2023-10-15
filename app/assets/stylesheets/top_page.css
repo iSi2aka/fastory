@@ -16,7 +16,7 @@
 }
 
 .top-image{
-  margin-top: 100px;
+  margin-top: 70px;
   width: 100%;
 }
 
@@ -31,8 +31,9 @@
 }
 
 .post-list-top{
-  height: 50px;
-  margin-bottom: 30px;
+  width: 100%;
+  margin: 0px 0 30px 0;
+  opacity: 0.9;
 }
 
 .post-list{

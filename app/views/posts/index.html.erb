@@ -10,10 +10,11 @@
       <div class='top-page-image'>
         <%= image_tag("top-image.png", class: "top-image") %>
       </div>
-      <ul class='post-lists'>
-       <div class='post-list-top'>
+      <div class='post-list-top'>
           <%= image_tag("scenarios.png", alt: "scenarios", class: "post-list-top") %>
        </div>
+      <ul class='post-lists'>
+       
         <% @post.each do |post| %>
           <% if post.title_id != 2 %> <%#下書きは表示しないようにする%>
             <li class='post-list'>
@@ -40,3 +41,14 @@
     <%= render "shared/footer"%>
   </div>
 </div>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal({ 
+    reset: false, 
+    distance: "10px",
+    duration: 3000,
+    delay: 200,
+    });
+  ScrollReveal().reveal('.top-image', { delay: 500, origin: "bottom" });
+</script>
