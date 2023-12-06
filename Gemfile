@@ -86,3 +86,5 @@ gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'pry-rails'
 gem "aws-sdk-s3", require: false
+
+gem 'pg', '1.5.3', require: false
