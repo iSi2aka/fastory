@@ -74,7 +74,6 @@ end
 group :production do
   gem 'unicorn', '6.1.0'
 end
-gem 'pg', '1.5.3', require: false
 
 gem 'devise'
 gem 'rspec-rails', '~> 4.0.0'
