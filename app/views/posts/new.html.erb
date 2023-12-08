@@ -8,8 +8,8 @@
     <div class='form-end'>
       <div class="btn-contents">
         <%= f.submit "投稿する", data: { turbo_method: :get, turbo_confirm: ( render "shared/error_messages", model: f.object ) } %><br/>
-        下書き ⇒ カテゴリーを「下書き」・「★必須」部分を記入<br>
-        本書き ⇒ 任意のカテゴリーを選択・「★必須」「★」部分を記入
+        下書き ⇒ カテゴリーを「下書き」 &「★必須」部分を記入<br>
+        本書き ⇒ 任意のカテゴリーを選択 &「★必須」「★」部分を記入
       </div>
     </div>
   <% end %>
