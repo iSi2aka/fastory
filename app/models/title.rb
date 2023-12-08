@@ -8,6 +8,7 @@ class Title < ActiveHash::Base
     { id: 3, name: '心停止' },
     { id: 4, name: '外傷' },
     { id: 5, name: '意識障害' },
-    { id: 6, name: 'その他' }
+    { id: 6, name: '内因性' },
+    { id: 7, name: 'ICU' }
   ]
 end 
