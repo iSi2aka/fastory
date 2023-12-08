@@ -9,59 +9,59 @@
   </div>
   <div class='basic-form'>
     <div class="field">
-      <%= f.label "カテゴリー" %><span class="indispensable">必須</span><br />
+      <%= f.label "カテゴリー" %><span class="indispensable">★必須</span><br />
       <%= f.collection_select(:title_id, Title.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
 
     <div class="field">
-      <%= f.label "疾患名" %><span class="indispensable">必須</span><br />
+      <%= f.label "疾患名" %><span class="indispensable">★必須</span><br />
       <%= f.text_area :disease, placeholder: "心筋梗塞" %>
     </div>
 
     <div class="field">
-      <%= f.label "患者名" %><span class="indispensable">必須</span><br />
+      <%= f.label "患者名" %><span class="indispensable">★必須</span><br />
       <%= f.text_area :name, placeholder: "山田 太郎" %>
     </div>
     
     <div class="field">
-      <%= f.label "年齢" %><span class="indispensable">必須</span><br />
+      <%= f.label "年齢" %><span class="indispensable">★必須</span><br />
       <%= f.text_field :age, placeholder: "0～100" %>
     </div>
 
     <div class="field">
-      <%= f.label "性別" %><span class="indispensable">必須</span><br />
+      <%= f.label "性別" %><span class="indispensable">★必須</span><br />
       <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
 
     <div class="field">
-      <%= f.label "同乗者/キーパーソン" %><span class="indispensable">必須</span><br />
+      <%= f.label "同乗者/キーパーソン" %><span class="indispensable">★</span><br />
       <%= f.text_area :family, placeholder: "同乗：友人　key:長男" %>
     </div>
   </div>
 
   <div class='ample-form'>
     <div class="field">
-      <%= f.label "アレルギー" %><span class="indispensable">必須</span><br />
+      <%= f.label "アレルギー" %><span class="indispensable">★</span><br />
       <%= f.text_area :allergy, placeholder: "エビ 花粉 イソジン" %>
     </div>
 
     <div class="field">
-      <%= f.label "服薬歴" %><span class="indispensable">必須</span><br />
+      <%= f.label "服薬歴" %><span class="indispensable">★</span><br />
       <%= f.text_area :medicine, placeholder: "アムロジピン" %>
     </div>
 
     <div class="field">
-      <%= f.label "既往歴" %><span class="indispensable">必須</span><br />
+      <%= f.label "既往歴" %><span class="indispensable">★</span><br />
       <%= f.text_area :past_history, placeholder: "高血圧" %>
     </div>
 
     <div class="field">
-      <%= f.label "最終飲食" %><span class="indispensable">必須</span><br />
+      <%= f.label "最終飲食" %><span class="indispensable">★</span><br />
       <%= f.text_area :last_meal, placeholder: "うどん 12時" %>
     </div>
 
     <div class="field">
-      <%= f.label "危険因子" %><span class="indispensable">必須</span><br />
+      <%= f.label "危険因子" %><span class="indispensable">★</span><br />
       <%= f.text_area :risk_factor, placeholder: "タバコ×20本/日" %>
     </div>
 
@@ -73,32 +73,32 @@
 
   <div class='abcd-form'>
     <div class="field">
-      <%= f.label "主訴" %><span class="indispensable">必須</span><br />
+      <%= f.label "主訴" %><span class="indispensable">★必須</span><br />
       <%= f.text_area :symptom, placeholder: "胸が痛い" %>
     </div>
 
     <div class="event-field">
-      <%= f.label "現病歴" %><span class="indispensable">必須</span><br />
+      <%= f.label "現病歴" %><span class="indispensable">★</span><br />
       <%= f.text_area :event, placeholder: "いつ どこで どうなった 誰が119した？" %>
     </div>
 
     <div class="field">
-      <%= f.label "A:気道" %><span class="indispensable">必須</span><br />
+      <%= f.label "A:気道" %><span class="indispensable">★</span><br />
       <%= f.text_area :airway, placeholder: "発語あり" %>
     </div>
 
     <div class="field">
-      <%= f.label "B:呼吸" %><span class="indispensable">必須</span><br />
+      <%= f.label "B:呼吸" %><span class="indispensable">★</span><br />
       <%= f.text_area :breathing, placeholder: "正常" %>
     </div>
 
     <div class="field">
-      <%= f.label "C:循環" %><span class="indispensable">必須</span><br />
+      <%= f.label "C:循環" %><span class="indispensable">★</span><br />
       <%= f.text_area :circulation, placeholder: "浅く速い" %>
     </div>
 
     <div class="field">
-      <%= f.label "D:意識" %><span class="indispensable">必須</span><br />
+      <%= f.label "D:意識" %><span class="indispensable">★</span><br />
       <%= f.text_area :dysfunction_cns, placeholder: "JCS:Ⅱ-30" %>
     </div>
 
@@ -111,7 +111,7 @@
   <div class='info-form'>
     <div class="field">
       <div class='copy-form'>
-        <div><%= f.label "院内の経過" %><span class="indispensable">必須</span><br /></div>
+        <div><%= f.label "院内の経過" %><span class="indispensable">★</span><br /></div>
 
         <%= render "shared/copy"%>
       
@@ -121,7 +121,7 @@
     </div>
 
     <div class="field">
-      <%= f.label "評価項目" %><span class="indispensable">必須</span><br />
+      <%= f.label "評価項目" %><span class="indispensable">★</span><br />
       <%= f.text_area :point, 
        placeholder: "例）・バイタルサインを安定化する処置ができる" %>
     </div>
@@ -129,7 +129,7 @@
 
     <div class="image-field">
       <div class="click-upload">
-        <%= f.label "画像所見" %><span class="indispensable">必須</span><br />
+        <%= f.label "画像所見" %><span class="indispensable">★</span><br />
         <div id="previews"></div>
         <%= f.file_field :images, name: 'post[images][]', data: {index: 0} %>
       </div>
