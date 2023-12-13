@@ -15,7 +15,7 @@
   - 同じシナリオを反復実施することができ、同種の知識の定着を図ることができる。
 
 # URL	
-  https://fastory.onrender.com
+  http://54.168.36.227/
 
 # テスト用アカウント	
 - Basic認証 ID：fast
