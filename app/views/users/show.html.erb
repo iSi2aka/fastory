@@ -7,6 +7,9 @@
     <%= render "shared/top_header/user_page" %>
 
     <div class="user-show">
+      <div class='top-page-image'>
+        <%= image_tag("fast_picture.jpg", class: "user-image") %>
+      </div>
       <div class='create-scenario'>
         <h1><%= current_user.nickname %> が投稿したシナリオ</h1>
         <% if current_user.posts.any? %>
