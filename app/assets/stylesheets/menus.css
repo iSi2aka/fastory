@@ -1,6 +1,6 @@
 .menus{
   height: 100vh;
-  width: 22vw;
+  width: 300px;
   background-color: white;
   border-right: 5px solid rgb(241, 241, 241);
   box-sizing: border-box;
@@ -9,29 +9,29 @@
 }
 
 .menu-top{
-  height: 16vh;
+  /* height: 16vh; */
   width: 100%;
 }
 
 .logo-icon{
-  width: 14vw;
-  margin: 2vh 0 0 20px;
+  width: 180px;
+  margin: 20px 0 0 20px;
 }
 
 .menu{
-  margin-top: 9vh;
-  padding-left: 4vw;
+  margin-top: 100px;
+  padding-left: 50px;
 }
 
 .new-post{
   padding-top: 60px;
   font-weight: 400;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
 }
 
 .image-icon{
-  height: 5vh;
-  width: 3vw;
+  /* height: 5vh; */
+  width: 30px;
   margin: 0 10px 5vh 0;
 }
 
@@ -46,27 +46,34 @@
 }
 
 .menu-editor a{
-  margin-bottom: 2vh;
-  font-size: calc(min(2vw, 2vh));
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 
 .post-images{
-  width: 15vw;
+  width: 150px;
   font-size: 9px;
 }
 
 .search-input {
-  height: 4vh;
-  width: 70%;
-  margin-bottom: 2vh;
-  font-size: calc(min(1.5vw, 2vh));
+  /* height: 4vh; */
+  width: 150px;
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 
 .total-like{
-  margin-top: 9vh;
+  margin-top: 75px;
 }
 
 span{
-  font-size: 1.5vw;
+  font-size: 20px;
   color: rgb(75, 75, 75);
+}
+
+
+/* レスポンシブ対応 *************************************/
+
+@media (max-width: 1000px) {
+  .menus{display:none}
 }
