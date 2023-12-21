@@ -20,30 +20,30 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   background-color: #0999af;
   z-index: 10;
 }
 
 .btn i{
   position: absolute;
-  top: 20px;
-  left: 10px;
-  width: 40px;
+  top: 10px;
+  left: 5px;
+  width: 34px;
   height: 2px;
   background-color: white;
   transition: 0.5s;
 }
 
 .btn i:nth-of-type(1){
-  top: 20px;
+  top: 10px;
 }
 .btn i:nth-of-type(2){
-  top: 30px;
+  top: 21px;
 }
 .btn i:nth-of-type(3){
-  top: 40px;
+  top: 32px;
 }
 
 .btn.active i:nth-of-type(1){
@@ -55,3 +55,8 @@
 .btn.active i:nth-of-type(3){
   transform: translateY(-10px) rotate(-45deg);
 }
+
+
+/* レスポンシブ対応 *************************************/
+
+@media (max-width: 1000px) {}
