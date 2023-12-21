@@ -1,12 +1,12 @@
 .footer{
-  height: 28vh;
-  width: calc(100vw - 26vw);
+  height: 200px;
+  width: calc(100vw - 360px);
   background-color: rgb(241, 241, 241);
-  margin-top: 2vh;
+  margin-top: 300px;
 }
 
 .footer-logo{
-  width: 12vw;
+  width: 150px;
   margin: 20px 0 0 20px;
 }
 
@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
-  font-size: 1vw;
+  font-size: 12px;
 }
 
 .footer-ul a{
@@ -25,4 +25,27 @@
 .footer-ul a:hover{
   text-decoration: underline;
   color: black;
+}
+
+/* レスポンシブ対応 *************************************/
+
+@media (max-width: 1000px) {
+  .footer{
+    height: 180px;
+    width: calc(100vw - 60px);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer{
+    height: 300px;
+    width: calc(100vw - 50px);
+  }
+  .footer-ul{
+    display: block;
+    padding: 25px 0 0 50px;
+  }
+  .footer-ul li{
+    margin-bottom: 20px;
+  }
 }
