@@ -1,6 +1,6 @@
 .top-header,
 .top-header2{
-  height: 8vh;
+  height: 50px;
   width: 100%;
   background-color: white;
   border-bottom: 3px solid rgb(241, 241, 241);
@@ -18,7 +18,7 @@
 }
 
 .top-header2{
-  font-size: 1.5vw;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .pt-icon{
-  width: 2vw;
+  width: 20px;
   margin: 0 15px 5px 0;
 }
 
@@ -38,8 +38,46 @@
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  font-size: 15px;
 }
 
 .user{
-  margin: 0 4vw 5px 0;
+  margin: auto 5vw;
+}
+
+
+/* レスポンシブ対応 *************************************/
+
+@media (max-width: 1000px) {
+  .top-header,
+  .top-header2{
+    height: 40px;
+  }
+  .top-header2{
+    font-size: 15px;
+  }
+  .header-icon,
+  .pt-icon{
+    height: 15px;
+  }
+  .top-header a{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-header,
+  .top-header2{
+    height: 30px;
+  }
+  .top-header2{
+    font-size: 12px;
+  }
+  .header-icon,
+  .pt-icon{
+    height: 12px;
+  }
+  .top-header a{
+    font-size: 10px;
+  }
 }
