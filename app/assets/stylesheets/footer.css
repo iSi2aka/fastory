@@ -39,13 +39,13 @@
 @media (max-width: 500px) {
   .footer{
     height: 300px;
-    width: calc(100vw - 50px);
+    width: calc(100vw - 45px);
   }
   .footer-ul{
     display: block;
     padding: 25px 0 0 50px;
   }
   .footer-ul li{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 }

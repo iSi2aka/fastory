@@ -1,6 +1,6 @@
 .side-header{
   height: 100vh;
-  width: 50px;
+  width: 45px;
   border-right: 5px solid rgb(241, 241, 241);
   box-sizing: border-box;
   position:sticky;
@@ -14,7 +14,6 @@
   height: 45px;
   width: 100%;
   border-right: 5px solid #0999af;
-  z-index: 100;
 }
 
 .side-header-bar2{
