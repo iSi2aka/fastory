@@ -6,6 +6,32 @@
       <i></i>
     </div>
     <div class='container'>
+      <div class='menu-top'>
+        <%= link_to image_tag("Fast.png", alt: "Fast", class: "logo-icon"), root_path %>
+      </div>
+      
+      <div class='menu'>
+        <%= link_to new_post_path, class: "new-post" do %>
+          <%= image_tag("メモ帳、書類のアイコン素材 その3 (1).png", alt: "メモ帳のフリーアイコン素材", class: "image-icon") %>
+          NEW
+        <% end %>  
+        <%= link_to search_posts_path, class: "new-post" do %>
+          <%= image_tag("検索用の虫眼鏡アイコン素材.png", alt: "検索用の虫眼鏡アイコン", class: "image-icon") %>
+          SEARCH
+        <% end %> 
+        <%= form_with(url: search_posts_path, local: true, method: :get) do |form| %>
+          <div class="form-group">
+            <%= text_field_tag 'keyword', params[:keyword], placeholder: '主訴を検索する', class: 'search-input' %>
+          </div>
+
+          <div class="form-group">
+            <%= select_tag 'title_id', options_from_collection_for_select(Title.all, 'id', 'name', params[:title_id]), class: 'search-input' %>
+          </div>
+          <div class="btn-contents">
+            <%= submit_tag '検索' %>
+          </div>
+        <% end %>
+      </div>
     </div>
 
   </div>
