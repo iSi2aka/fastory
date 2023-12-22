@@ -108,3 +108,19 @@
   justify-content: space-between;
   color: #0999af;
 }
+
+
+/* レスポンシブ対応 *************************************/
+
+@media (max-width: 500px) {
+  .main-form{
+    display: block;
+  }
+  .info-form{
+    width: 400px;
+    margin: 0 15px;
+  }
+  .copies button{
+    font-size: 10px;
+  } 
+}
