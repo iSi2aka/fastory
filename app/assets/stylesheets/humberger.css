@@ -1,62 +1,66 @@
-.container{
-  position: fixed;
-  top: 40px;
-  bottom: 0;
-  left: 0;
-  right: calc(100vw - 300px);
-  background-color: white;
-  border: 10px solid #0999af;
-  z-index: 9;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.5s;
-}
-.container.active{
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.btn{
-  /* position: fixed; */
-  top: 0;
-  left: 0;
-  width: 45px;
-  height: 45px;
-  background-color: #0999af;
-  z-index: 10;
-}
-
-.btn i{
-  position: absolute;
-  top: 10px;
-  left: 5px;
-  width: 34px;
-  height: 2px;
-  background-color: white;
-  transition: 0.5s;
-}
-
-.btn i:nth-of-type(1){
-  top: 10px;
-}
-.btn i:nth-of-type(2){
-  top: 21px;
-}
-.btn i:nth-of-type(3){
-  top: 32px;
-}
-
-.btn.active i:nth-of-type(1){
-  transform: translateY(10px) rotate(45deg);
-}
-.btn.active i:nth-of-type(2){
-  opacity: 0;
-}
-.btn.active i:nth-of-type(3){
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-
 /* レスポンシブ対応 *************************************/
 
-@media (max-width: 1000px) {}
+@media (max-width: 1000px) {
+  .container{
+    position: fixed;
+    top: 40px;
+    bottom: 0;
+    left: 0;
+    right: calc(100vw - 300px);
+    background-color: white;
+    border: 10px solid #0999af;
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  .container.active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .btn{
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #0999af;
+    z-index: 10;
+  }
+  
+  .btn i{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 34px;
+    height: 2px;
+    background-color: white;
+    transition: 0.5s;
+  }
+  
+  .btn i:nth-of-type(1){
+    top: 10px;
+  }
+  .btn i:nth-of-type(2){
+    top: 21px;
+  }
+  .btn i:nth-of-type(3){
+    top: 32px;
+  }
+  
+  .btn.active i:nth-of-type(1){
+    transform: translateY(10px) rotate(45deg);
+  }
+  .btn.active i:nth-of-type(2){
+    opacity: 0;
+  }
+  .btn.active i:nth-of-type(3){
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+
+}
+
+
+
