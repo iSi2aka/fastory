@@ -4,15 +4,16 @@
   .container{
     position: fixed;
     top: 40px;
-    bottom: 0;
+    bottom: 30vh;
     left: 0;
-    right: calc(100vw - 300px);
+    right: calc(100vw - 330px);
     background-color: white;
     border: 10px solid #0999af;
     z-index: 9;
     opacity: 0;
     pointer-events: none;
     transition: 0.5s;
+    overflow: auto;
   }
   .container.active{
     opacity: 1;

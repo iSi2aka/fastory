@@ -1,5 +1,5 @@
 .post-show{
-  height: calc(100vh - 38vh);
+  /* height: calc(100vh - 38vh); */
   width: 100%;
   display: flex;
 }
@@ -9,12 +9,12 @@
   border-right: 5px solid rgb(241, 241, 241);
   overflow: auto;
   padding: 40px 10px 10px 20px;
-  font-size: 1.2vw;
+  font-size: 14px;
 }
 
 .comment-index{
   width: 30%;
-  font-size: 1.2vw;
+  font-size: 14px;
   padding: 30px 20px 0;
   overflow: auto;
 }
@@ -38,7 +38,7 @@
   margin-bottom: 50px;
   padding: 0 10px;
   box-sizing: border-box;
-  font-size: 1vw;
+  font-size: 10px;
 }
 
 .comment-list a{
@@ -70,7 +70,12 @@
   padding: 0 20px;
   background-color: #f1f1f1;
   box-sizing: border-box;
-
+  position: fixed;
+  top: 70vh;
+  right: 0;
+  left: 345px;
+  bottom: 0;
+  z-index: 0;
 }
 
 .comment-new-main textarea{
@@ -80,4 +85,51 @@
   resize: none;
   border: none;
   background-color: white;
+}
+
+
+
+/* レスポンシブ対応 *************************************/
+
+@media (max-width: 1000px) {
+  .post-info{
+    width: 60%;
+  }
+  .comment-index{
+    width: 40%;
+  }
+  .comment-new{
+    width: calc(100vw - 45px);
+    position: fixed;
+    top: 70vh;
+    right: 0;
+    left: 45px;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .post-show{
+    width: auto;
+    display: block;
+    overflow: auto;
+  }
+  .post-info{
+    padding: 50px 25px;
+    border-bottom: 5px solid rgb(241, 241, 241);
+    border-right: 0;
+  }
+  .comment-index{
+    width: 50%;
+    margin-top: 0px;
+  }
+  .comment-new{
+    width: calc(100vw - 65px);
+    margin-top: 50px;
+    position: inherit;
+    top: 70vh;
+    right: 0;
+    left: 45px;
+    bottom: 0;
+  }
 }
