@@ -1,5 +1,5 @@
 .post-show{
-  /* height: calc(100vh - 38vh); */
+  height: calc(70vh - 40px);
   width: 100%;
   display: flex;
 }
