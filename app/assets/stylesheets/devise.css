@@ -48,3 +48,18 @@
   border: 1px solid #0999af;
   border-radius: 5px;
 }
+
+
+/* レスポンシブ対応 *************************************/
+
+@media (max-width: 500px) {
+  .login-form{
+    width: 60%;
+  }
+  .login-field label{
+    font-size: 14px;
+  }
+  .login-field em{
+    font-size:12px ;
+  }
+}

@@ -39,7 +39,6 @@
 @media (max-width: 500px) {
   .footer{
     height: 300px;
-    width: calc(100vw - 45px);
   }
   .footer-ul{
     display: block;
