@@ -13,7 +13,7 @@
         <%= image_tag("fast_picture.jpg", class: "user-image") %>
       </div>
       <div class='create-scenario'>
-        <h1><%= current_user.nickname %> が投稿したシナリオ</h1>
+        <h1><span class="indispensable"><%= current_user.nickname %> が投稿したシナリオ</span></h1>
         <% if current_user.posts.any? %>
           <ul class='user-lists'>
             <% current_user.posts.each do |post| %>
@@ -35,7 +35,7 @@
       </div>
         
       <div class="like-scenario">
-        <h1><%= current_user.nickname %> がいいねしたシナリオ</h1>
+        <h1><span class="indispensable"><%= current_user.nickname %> がいいねしたシナリオ</span></h1>
         <% if current_user.likes.any? %>
           <ul class='user-lists'>
             <% current_user.likes.each do |like| %>
