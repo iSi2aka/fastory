@@ -39,6 +39,7 @@
   border: 1px solid #0999af;
   border-bottom: 5px solid #0999af;
   border-radius: 5px;
+  margin-bottom: 50px;
 }
 
 .btn-contents input[type=submit]:hover {
@@ -61,5 +62,11 @@
   }
   .login-field em{
     font-size:12px ;
+  }
+  .form-end{
+    margin-bottom: 20px;
+  }
+  .btn-contents{
+    font-size: 12px;
   }
 }
