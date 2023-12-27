@@ -124,7 +124,7 @@
     margin-top: 0px;
   }
   .comment-new{
-    width: calc(100vw - 65px);
+    width: calc(100vw - 45px);
     margin-top: 50px;
     position: inherit;
     top: 70vh;

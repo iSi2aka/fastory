@@ -10,6 +10,9 @@
   padding: 0 40px;
   position:sticky;
   top:0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .top-header{
